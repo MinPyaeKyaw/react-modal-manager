@@ -16,7 +16,7 @@ Wrap your application with the ModalProvider component to manage modals:
 ```
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ModalProvider } from 'your-modal-package';
+import { ModalProvider } from 'react-modal-manager';
 
 const App = () => {
   return (
@@ -35,7 +35,7 @@ Use the useModal hook to access modal management functions. To open a modal, cal
 
 ```
 import React from 'react';
-import { useModal } from 'your-modal-package';
+import { useModal } from 'react-modal-manager';
 
 const MyComponent = () => {
   const { open } = useModal();
@@ -62,7 +62,7 @@ To close a specific modal, use the close method with the modal ID:
 
 ```
 import React from 'react';
-import { useModal } from 'your-modal-package';
+import { useModal } from 'react-modal-manager';
 
 const MyComponent = () => {
   const { close } = useModal();
@@ -108,7 +108,7 @@ Here is a complete example of using the modal component:
 ```
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ModalProvider, useModal } from 'your-modal-package';
+import { ModalProvider, useModal } from 'react-modal-manager';
 
 const MyApp = () => {
   const { open } = useModal();
