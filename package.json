@@ -1,5 +1,5 @@
 {
-  "name": "react-modal-manager",
+  "name": "@saimin/react-modal-manager",
   "version": "1.0.0",
   "description": "Centralized react modal manager",
   "main": "dist/index.js",

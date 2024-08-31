@@ -31,10 +31,11 @@ type ModalContextType = {
     close: (id: string) => void;
     closeAll: () => void;
 };
-interface Props {
+type ProviderProps = {
     children: ReactNode;
-}
-declare const ModalProvider: ({ children }: Props) => react_jsx_runtime.JSX.Element;
+    config?: Omit<ModalProps, "content">;
+};
+declare const ModalProvider: ({ children, config }: ProviderProps) => react_jsx_runtime.JSX.Element;
 declare const useModal: () => ModalContextType;
 
 export { ModalProvider, useModal };

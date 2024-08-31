@@ -5,7 +5,10 @@ This is a customizable modal component library for React.js. It provides a flexi
 ## Installation
 
 To install the package, use npm:
-`npm install react-modal-manager`
+
+```
+npm install @saimin/react-modal-manager
+```
 
 ## Usage
 
@@ -16,7 +19,7 @@ Wrap your application with the ModalProvider component to manage modals:
 ```
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ModalProvider } from 'react-modal-manager';
+import { ModalProvider } from '@saimin/react-modal-manager';
 
 const App = () => {
   return (
@@ -35,7 +38,7 @@ Use the useModal hook to access modal management functions. To open a modal, cal
 
 ```
 import React from 'react';
-import { useModal } from 'react-modal-manager';
+import { useModal } from '@saimin/react-modal-manager';
 
 const MyComponent = () => {
   const { open } = useModal();
@@ -62,7 +65,7 @@ To close a specific modal, use the close method with the modal ID:
 
 ```
 import React from 'react';
-import { useModal } from 'react-modal-manager';
+import { useModal } from '@saimin/react-modal-manager';
 
 const MyComponent = () => {
   const { close } = useModal();
@@ -108,7 +111,7 @@ Here is a complete example of using the modal component:
 ```
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ModalProvider, useModal } from 'react-modal-manager';
+import { ModalProvider, useModal } from '@saimin/react-modal-manager';
 
 const MyApp = () => {
   const { open } = useModal();
