@@ -1,0 +1,35 @@
+{
+  "name": "react-modal-manager",
+  "version": "1.0.0",
+  "description": "Centralized react modal manager",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "rollup": "rollup -c --bundleConfigAsCjs"
+  },
+  "author": "Sai Min",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Sai Min",
+      "email": "saiminpyaekyaw@gmail.com",
+      "url": "https://github.com/MinPyaeKyaw"
+    }
+  ],
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.7.0",
+    "typescript": "^5.5.4"
+  }
+}
