@@ -76,6 +76,7 @@ const ModalContext = createContext<ModalContextType>({
 export const ModalProvider = ({ children, config }: ProviderProps) => {
   const [modals, setModals] = useState<ModalState[]>([]);
   const [isClosing, setIsClosing] = useState<boolean>(false);
+  const [closingId, setClosingId] = useState<string | null>(null);
 
   const generateFlexPosition = (
     position: ModalContentPosition
@@ -262,10 +263,10 @@ export const ModalProvider = ({ children, config }: ProviderProps) => {
 
   const close = (id: string) => {
     setIsClosing(true);
+    setClosingId(id);
     document.body.style["overflow"] = "auto";
 
     const modal = modals.find((m) => m.id === id);
-
     if (modal?.props.animationType) {
       setTimeout(() => {
         setModals((prev) => prev.filter((modal) => modal.id !== id));
@@ -301,7 +302,9 @@ export const ModalProvider = ({ children, config }: ProviderProps) => {
                   className={
                     modal.props.animationType
                       ? isClosing
-                        ? "backdrop-exit"
+                        ? closingId === modal.id
+                          ? "backdrop-exit"
+                          : "backdrop"
                         : "backdrop"
                       : ""
                   }
@@ -318,7 +321,9 @@ export const ModalProvider = ({ children, config }: ProviderProps) => {
                 >
                   <div
                     className={
-                      modal.props.animationType && isClosing
+                      modal.props.animationType &&
+                      isClosing &&
+                      closingId === modal.id
                         ? modal.animationClass?.exit
                         : modal.animationClass?.enter
                     }
