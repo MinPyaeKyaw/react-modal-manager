@@ -1,6 +1,6 @@
 {
   "name": "@saimin/react-modal-manager",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Centralized react modal manager",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -21,6 +21,15 @@
     "type": "git",
     "url": "https://github.com/MinPyaeKyaw/react-modal-manager.git"
   },
+  "keywords": [
+    "react",
+    "modal",
+    "react-modal",
+    "react-modal-mananger",
+    "modal-manager",
+    "saimin",
+    "@saimin"
+  ],
   "devDependencies": {
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",

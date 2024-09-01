@@ -87,6 +87,18 @@ const { closeAll } = useModal();
 closeAll();
 ```
 
+### Applying props to all modals
+
+To apply props to all modal, add config prop to ModalProvider.
+
+```
+<ModalProvider config={{
+  animationType: "zoom"
+}}>
+  ...children nodes
+</ModalProvider>
+```
+
 ## Modal Props
 
 The ModalProps object allows you to customize the appearance and behavior of your modal. Here are the available options:
