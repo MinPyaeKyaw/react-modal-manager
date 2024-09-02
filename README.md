@@ -10,6 +10,11 @@ To install the package, use npm:
 npm install @saimin/react-modal-manager
 ```
 
+## Demo
+
+[Demo](https://react-modal-manager-demo.vercel.app/)
+[Demo Source Code](https://github.com/MinPyaeKyaw/react-modal-manager-demo)
+
 ## Usage
 
 ### Import the Modal Provider
